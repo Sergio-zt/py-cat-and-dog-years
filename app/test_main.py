@@ -1,7 +1,7 @@
 from app.main import get_human_age
 import pytest
 
- 
+
 class TestCheckAge:
     @pytest.mark.parametrize(
         "cat_age, dog_age, expected_res",
@@ -19,9 +19,9 @@ class TestCheckAge:
     )
     def test_check_correct_return(
         self,
-        cat_age,
-        dog_age,
-        expected_res
+        cat_age: int,
+        dog_age: int,
+        expected_res: list
     ) -> None:
         assert get_human_age(cat_age, dog_age) == expected_res
 
@@ -33,9 +33,9 @@ class TestCheckAge:
     )
     def test_get_errors(
         self,
-        cat_age,
-        dog_age,
-        expected_error
+        cat_age: int,
+        dog_age: int,
+        expected_error: list
     ) -> None:
         with pytest.raises(expected_error):
             get_human_age(cat_age, dog_age)

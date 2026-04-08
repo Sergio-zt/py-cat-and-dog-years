@@ -23,5 +23,3 @@ def get_human_age(cat_age: int, dog_age: int) -> list:
             for _ in range(dog_age // 5):
                 res_dog_age += 1
     return [res_cat_age, res_dog_age]
-
-print(get_human_age(-20, -30))
